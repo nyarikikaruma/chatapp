@@ -7,9 +7,13 @@ export default defineNuxtConfig({
   nitro: {
     experimental: {
       wasm: true
-    },
-    plugins: ['~/server/plugins/websocket.ts']
+    }
+  },
+  runtimeConfig: {
+    public: {
+      socketUrl: process.env.NODE_ENV === 'production' ? '' : 'http://localhost:3000'
+    }
   },
   css: ['~/assets/css/main.css'],
-  ssr: false // Disable SSR for better WebSocket compatibility
+  ssr: false
 })
