@@ -1,75 +1,57 @@
-# Nuxt Minimal Starter
+# 💬 Real-Time Chat Dashboard
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A real-time chat app built with **Nuxt 3**, featuring live messages and typing indicators using **WebSocket (Socket.IO)**.
 
-## Setup
+## ⚙️ Features
 
-Make sure to install dependencies:
+* Real-time messaging
+* Typing indicators
+* Tailwind CSS styling
+* Fullstack (Nuxt 3 + API routes + WebSocket)
+
+## 🛠️ Tech Stack
+
+* **Frontend**: Nuxt 3, Vue 3, Tailwind CSS
+* **Backend**: Nuxt Server API, Socket.IO
+
+## 🚀 Getting Started
 
 ```bash
-# npm
+# Clone the repo
+git clone <repo-url>
+cd realtime-chat-dashboard
+
+# Install dependencies
 npm install
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
+# Start development server
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+Visit `http://localhost:3000`
 
-Build the application for production:
+## 🧪 Test Real-Time Behavior
+
+* Open in two tabs to see live messages and typing.
+* Built-in simulation sends fake typing/messages every few seconds.
+
+## 🔌 API Endpoints
+
+* `GET /api/messages` – returns 5 latest messages.
+* WebSocket `/ws/chat` – handles typing and message events.
+
+## 📁 Structure (Simplified)
+
+```
+/server/api/messages.get.ts
+/server/plugins/socket.ts
+/composables/useSocket.ts
+/app.vue
+```
+
+## 📦 Build & Deploy
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+npm run build   # Build for production
+npm run preview # Preview build
 ```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
