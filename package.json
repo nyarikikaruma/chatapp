@@ -1,0 +1,23 @@
+{
+  "name": "realtime-chat-dashboard",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Real-time AI-powered chat dashboard built with Nuxt 3",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "nuxt": "^3.11.0"
+  },
+  "dependencies": {
+    "@nuxtjs/tailwindcss": "^6.11.4",
+    "@vueuse/nuxt": "^10.9.0",
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.7.5"
+  }
+}
